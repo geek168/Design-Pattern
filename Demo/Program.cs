@@ -1,4 +1,5 @@
-﻿using Strategy;
+﻿using Observer;
+using Strategy;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,12 +12,10 @@ namespace Demo
     {
         static void Main(string[] args)
         {
-            ModelDuck duck = new ModelDuck(new FlyNoWay(), new Squeak());
-            duck.Display();
-            duck.Swim();
-            duck.PerformFly();
-            duck.PerformQuack();
 
+            WeatherData data = new WeatherData();
+            CurrentConditionDisplay condition = new CurrentConditionDisplay(data);
+            data.SetMessurements(34, 20, 1.5f);
 
             Console.ReadLine();
         }
