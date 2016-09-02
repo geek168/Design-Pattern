@@ -1,4 +1,5 @@
-﻿using Observer;
+﻿using Decorator;
+using Observer;
 using Strategy;
 using System;
 using System.Collections.Generic;
@@ -13,9 +14,12 @@ namespace Demo
         static void Main(string[] args)
         {
 
-            WeatherData data = new WeatherData();
-            CurrentConditionDisplay condition = new CurrentConditionDisplay(data);
-            data.SetMessurements(34, 20, 1.5f);
+            Beverage beverage = new Espresso();
+            beverage = new Milk(beverage);
+            beverage = new Mocha(beverage);
+            beverage = new Whip(beverage);
+            Console.WriteLine(beverage.GetDescription());
+            Console.WriteLine(beverage.Cost());
 
             Console.ReadLine();
         }
