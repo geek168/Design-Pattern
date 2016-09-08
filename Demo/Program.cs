@@ -1,4 +1,5 @@
 ﻿using Decorator;
+using FactoryMethod;
 using Observer;
 using Strategy;
 using System;
@@ -14,12 +15,12 @@ namespace Demo
         static void Main(string[] args)
         {
 
-            Beverage beverage = new Espresso();
-            beverage = new Milk(beverage);
-            beverage = new Mocha(beverage);
-            beverage = new Whip(beverage);
-            Console.WriteLine(beverage.GetDescription());
-            Console.WriteLine(beverage.Cost());
+            PizzaStore NYPizzasStore = new NYPizzaStore();
+            PizzaStore ChicagoPizzaStore = new ChicagoPizzaStore();
+
+            NYPizzasStore.OrderPizza("Cheese");
+            Console.WriteLine();
+            ChicagoPizzaStore.OrderPizza("Cheese");
 
             Console.ReadLine();
         }
