@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TemplateMethod;
 
 namespace Demo
 {
@@ -15,12 +16,8 @@ namespace Demo
         static void Main(string[] args)
         {
 
-            PizzaStore NYPizzasStore = new NYPizzaStore();
-            PizzaStore ChicagoPizzaStore = new ChicagoPizzaStore();
-
-            NYPizzasStore.OrderPizza("Cheese");
-            Console.WriteLine();
-            ChicagoPizzaStore.OrderPizza("Cheese");
+            Tea tea = new Tea();
+            tea.PrepareReceipe();
 
             Console.ReadLine();
         }

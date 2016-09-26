@@ -54,9 +54,21 @@
       <Project>{086b1cb9-7e46-4541-be77-d90edc3880e5}</Project>
       <Name>AbstractFactory</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Adapter\Adapter.csproj">
+      <Project>{a486b1c4-6be3-4d64-b5a0-6504ca04851b}</Project>
+      <Name>Adapter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Command\Command.csproj">
+      <Project>{c30bdc3d-1043-4888-a5be-e55b534b06b9}</Project>
+      <Name>Command</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Decorator\Decorator.csproj">
       <Project>{b0e534a7-8e93-4d46-a9d1-783ff87a8d9b}</Project>
       <Name>Decorator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Facade\Facade.csproj">
+      <Project>{b592cf65-796f-4ad7-9c83-ccfd2cdde004}</Project>
+      <Name>Facade</Name>
     </ProjectReference>
     <ProjectReference Include="..\FactoryMethod\FactoryMethod.csproj">
       <Project>{7a8c8fe7-a7dc-4145-8088-cc4756f221c1}</Project>
@@ -77,6 +89,10 @@
     <ProjectReference Include="..\Strategy\Strategy.csproj">
       <Project>{edbb9709-8a5e-4cb7-90df-8f07caf06909}</Project>
       <Name>Strategy</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TemplateMethod\TemplateMethod.csproj">
+      <Project>{74ef3426-a8e5-4326-b129-573d100d8c6e}</Project>
+      <Name>TemplateMethod</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
